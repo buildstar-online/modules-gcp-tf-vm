@@ -25,3 +25,56 @@ resource "google_compute_firewall" "allow-ssh" {
   source_ranges = ["0.0.0.0/0"]
   target_tags = ["ssh"]
 }
+
+# allow vnc
+resource "google_compute_firewall" "allow-vnc" {
+  name    = "allow-vnc"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports    = ["5900", "5901"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+  target_tags = ["vnc"]
+}
+
+# allow games on whales
+resource "google_compute_firewall" "allow-gow" {
+  name    = "allow-gow"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports    = ["47989", "47990"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+  target_tags = ["gow"]
+}
+
+# allow wireguard
+resource "google_compute_firewall" "allow-wg" {
+  name    = "allow-wg"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports    = ["51820", "51821", "51823", "51824"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+  target_tags = ["wg"]
+}
+
+
+# allow grafaa stack
+resource "google_compute_firewall" "allow-wg" {
+  name    = "allow-wg"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports    = ["3000", "9090", "9100", "3100", "9096"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+  target_tags = ["monitoring"]
+}
