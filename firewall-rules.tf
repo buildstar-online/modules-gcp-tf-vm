@@ -63,7 +63,7 @@ resource "google_compute_firewall" "allow-wg" {
 
 # allow grafaa stack
 resource "google_compute_firewall" "allow-monitoring" {
-  name    = "allow-wg"
+  name    = "allow-monitoring"
   network = "default"
   allow {
     protocol = "tcp"
