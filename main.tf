@@ -4,6 +4,10 @@ resource "google_compute_address" "static_ip" {
   region       = var.location
 }
 
+output "instance_ip_addr" {
+  value = google_compute_address.static_ip.address
+}
+
 resource "random_pet" "vm_name" {
   length = 2
   separator = "-"
