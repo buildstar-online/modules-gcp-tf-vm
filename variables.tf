@@ -38,6 +38,11 @@ variable "location" {
   type = string
 }
 
+variable "userdata" {
+  type = string
+  default = "user-data.yaml"
+}
+
 variable "project_id" {
   type = string
 }
