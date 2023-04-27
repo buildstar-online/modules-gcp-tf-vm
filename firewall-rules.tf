@@ -10,7 +10,6 @@ resource "google_compute_firewall" "rules" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["web"]
 }
 
 # allow ssh
@@ -23,7 +22,6 @@ resource "google_compute_firewall" "allow-ssh" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["ssh"]
 }
 
 # allow vnc
@@ -36,7 +34,6 @@ resource "google_compute_firewall" "allow-vnc" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["vnc"]
 }
 
 # allow games on whales
@@ -49,7 +46,6 @@ resource "google_compute_firewall" "allow-gow" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["gow"]
 }
 
 # allow wireguard
@@ -62,7 +58,6 @@ resource "google_compute_firewall" "allow-wg" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["wg"]
 }
 
 
@@ -76,5 +71,4 @@ resource "google_compute_firewall" "allow-wg" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["monitoring"]
 }
