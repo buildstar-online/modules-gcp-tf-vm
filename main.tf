@@ -54,7 +54,7 @@ resource "google_compute_instance" "compute_instance" {
   }
 
   metadata = {
-    user-data = file("user-data.yaml")
+    user-data = file(${var.userdata})
   }
 
   tags = ["web", "ssh"]
