@@ -1,7 +1,7 @@
 # GCP  Virtual Machine Terraform Module
 
 Create a spot-instance on GCP with optional GPU.
-Designed to work with https://github.com/cloudymax/modules-gcp-tf-base
+Designed to work with [gcp-tf-base](https://github.com/cloudymax/modules-gcp-tf-base)
 
 
 ## Usage
