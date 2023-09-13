@@ -30,7 +30,7 @@ resource "google_compute_firewall" "allow-vnc" {
   network = "default"
   allow {
     protocol = "tcp"
-    ports    = ["5900", "5901"]
+    ports    = ["5900", "5901", "8080"]
   }
 
   source_ranges = ["0.0.0.0/0"]
